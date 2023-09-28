@@ -1,5 +1,5 @@
 ## Proyecto 1 
-Video: 
+Video de explicación: https://www.youtube.com/watch?v=-zTJTZT-k-w&ab_channel=JORGELUISGUTIERREZMARTINEZ
 
 
 En este primer proyecto vamos a desarrollar una applicación web sencilla
