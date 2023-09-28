@@ -30,7 +30,7 @@ class WebRequestHandler(BaseHTTPRequestHandler):
             c = SimpleCookie()
             c["session"] = uuid.uuid4()
         else:
-            print("Cookie found")
+            print("Cookie encontrada")
         return c.get("session").value
 
     def do_GET(self):
@@ -64,11 +64,7 @@ class WebRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             response = f"""
             {book_page.decode()}
-        <p>  Ruta: {self.path}            </p>
-        <p>  URL: {self.url}              </p>
-        <p>  HEADERS: {self.headers}      </p>
-        <p>  SESSION: {session_id}      </p>
-        <p>  Recomendación: {book_recomendation}      </p>
+        <h3>  Recomendación: <a href="/books/{book_recomendation}">{book_recomendation}</a></h3>
 """
             self.wfile.write(response.encode("utf-8"))
         else:
